@@ -3,16 +3,12 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
 
-    [Tooltip("In time")][SerializeField] float loadLevelDelay = 1f;
+    [Tooltip("In time")][SerializeField] float loadLevelDelay = 2f;
     [Tooltip("FX prefab on death")] [SerializeField] GameObject deathFX;
-    // Start is called before the first frame update
-    private void OnCollisionEnter(Collision collision)
-    {
-        print("Player collided  smth");
-    }
 
     private void OnTriggerEnter(Collider other)
     {
+        print("Player triggered with smth");
         StartDeathSequence();
         deathFX.SetActive(true);
         Invoke("ReloadScene", loadLevelDelay);
@@ -28,5 +24,4 @@ public class CollisionHandler : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    
 }

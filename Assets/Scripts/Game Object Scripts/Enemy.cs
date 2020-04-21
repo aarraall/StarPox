@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
         Destroy(fx, 5f); // todo customize it    
         Destroy(gameObject);
 
-        scoreBoard.ScoreHit();
+        scoreBoard.ScoreHit(scorePerHit);
     }
 
 }
