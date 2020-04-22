@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4655758116509614}
   - component: {fileID: 33645135167930238}
   - component: {fileID: 23854946942751046}
-  - component: {fileID: 835673339}
+  - component: {fileID: 1510797552}
   m_Layer: 0
   m_Name: Ship_05
   m_TagString: Untagged
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754910023302818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3.7434125}
-  m_LocalScale: {x: 50.000046, y: 50, z: 50.00003}
+  m_LocalPosition: {x: -285, y: 120, z: 395}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &835673339
+--- !u!114 &1510797552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,3 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8191420961079243500, guid: 459e91b29564dca4990e6474c8ead36a, type: 3}
+  parent: {fileID: 0}
+  scorePerHit: 12
+  healthPoint: 200
+  damagePerHit: 25

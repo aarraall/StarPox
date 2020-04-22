@@ -132,6 +132,9 @@ MonoBehaviour:
   controlPitchFactor: 5
   positionYawFactor: 3
   controlRollFactor: -35
+  guns:
+  - {fileID: 5537814898760501346}
+  - {fileID: 5537814898856137248}
 --- !u!114 &4351491032028039257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +261,18 @@ PrefabInstance:
 --- !u!4 &4318501113212952559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6562258639140415110, guid: 8a7b62d965d045747b2f8b76f8da95e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6989505906511460713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5537814898760501346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3181216822345101579, guid: 8a7b62d965d045747b2f8b76f8da95e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6989505906511460713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5537814898856137248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3181216822442830665, guid: 8a7b62d965d045747b2f8b76f8da95e5,
     type: 3}
   m_PrefabInstance: {fileID: 6989505906511460713}
   m_PrefabAsset: {fileID: 0}

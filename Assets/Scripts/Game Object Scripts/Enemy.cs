@@ -3,9 +3,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("On Death")]
     [Tooltip("FX prefab on death")] [SerializeField] GameObject deathFX;
     [SerializeField] Transform parent;
     [SerializeField] int scorePerHit = 12;
+
+    [Header("On Alive")]
+    [SerializeField] int healthPoint = 100;
+    [SerializeField] int damagePerHit = 20;
     
     ScoreBoard scoreBoard;
 
@@ -26,13 +31,22 @@ public class Enemy : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
+        healthPoint = healthPoint - damagePerHit;
+        //todo consider hit FX
+        if (healthPoint < 1)
+        {
+            KillEnemy();
+        }
         
-        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity) as GameObject;
-        fx.transform.parent = parent;
-        Destroy(fx, 5f); // todo customize it    
-        Destroy(gameObject);
 
         scoreBoard.ScoreHit(scorePerHit);
     }
 
+    private void KillEnemy()
+    {
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity) as GameObject;
+        fx.transform.parent = parent;
+        Destroy(fx, 5f); // todo customize it    
+        Destroy(gameObject);
+    }
 }

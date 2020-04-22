@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7889166993671245013}
   - component: {fileID: 7854997343457916223}
   - component: {fileID: 7864763858332625829}
-  - component: {fileID: 539161119}
+  - component: {fileID: 6283604175110615828}
   m_Layer: 0
   m_Name: e_ship1
   m_TagString: Untagged
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7886063710729732453}
-  m_LocalRotation: {x: 0.36984596, y: 0.61594856, z: 0.40064397, w: -0.5685998}
-  m_LocalPosition: {x: 458.9, y: 48.9, z: 338.7}
-  m_LocalScale: {x: 43.211998, y: 43.212006, z: 43.211983}
+  m_LocalRotation: {x: 0.43903205, y: 0.52321815, z: 0.4240369, w: -0.59471536}
+  m_LocalPosition: {x: -220, y: 110, z: -135}
+  m_LocalScale: {x: 50.00002, y: 43.212006, z: 50.00002}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 246.084, y: 85.422, z: -180}
+  m_LocalEulerAnglesHint: {x: 255, y: 105, z: -190}
 --- !u!33 &7854997343457916223
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &539161119
+--- !u!114 &6283604175110615828
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,3 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8191420961079243500, guid: 459e91b29564dca4990e6474c8ead36a, type: 3}
+  parent: {fileID: 0}
+  scorePerHit: 12
+  healthPoint: 150
+  damagePerHit: 25

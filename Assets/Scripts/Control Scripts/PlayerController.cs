@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
@@ -17,6 +18,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float positionYawFactor = 3f;
     [SerializeField] float controlRollFactor = -35f;
 
+    [Header("Shooting Mechanics")]
+    [SerializeField] GameObject[] guns;
+
     float xThrow, yThrow;
     bool isControlEnabled = true;
     // Start is called before the first frame update
@@ -30,8 +34,11 @@ public class PlayerController : MonoBehaviour
         {
             ProcessTranslation();
             ProcessRotation();
+            ProcessFiring();
         }       
     }
+
+    
 
     void OnPlayerDeath()
     {
@@ -65,5 +72,33 @@ public class PlayerController : MonoBehaviour
         transform.localPosition = new Vector3(
             clampedXPos, clampedYPos, transform.localPosition.z);
         
+    }
+
+    private void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    private void ActivateGuns()
+    {
+        foreach(GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach(GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
     }
 }
