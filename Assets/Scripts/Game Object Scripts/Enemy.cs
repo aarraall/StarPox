@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] Transform parent;
     [SerializeField] int scorePerHit = 12;
 
+    //Add deathFX scalability
     [Header("On Alive")]
     [SerializeField] int healthPoint = 100;
     [SerializeField] int damagePerHit = 20;

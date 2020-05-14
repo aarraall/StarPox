@@ -19,6 +19,7 @@ public class TagSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //todo handle char's state by here
         switch (state)
         {
             case State.Alive:
@@ -27,7 +28,4 @@ public class TagSwitcher : MonoBehaviour
                 break;
         }
     }
-
-
-   
 }
